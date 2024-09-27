@@ -41,10 +41,15 @@ const handleLogin = async(req, res) => {
         const currentUser = {...foundUser, refreshToken};
         //3. => now I need to combine currentUser and otherUsers we can do that with the setter function or updater function
         usersDB.setUsers([...otherUsers, currentUser]); // now we have json data with refresh token 
-        //5. => so the thing is the cookies are vulnerable and they accessed via javascript so we don't send in just cookies but we know cookie with httpOnly is not accessed via javascript so can do that 
+        //4. => now we need to write json file
+        await fsPromises.writeFile(
+            path.join(__dirname, '..', 'model', 'users.json'),
+            JSON.stringify(usersDB.users)
+        )
+        //6. => so the thing is the cookies are vulnerable and they accessed via javascript so we don't send in just cookies but we know cookie with httpOnly is not accessed via javascript so can do that 
         res.cookie('jwt', refreshToken, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 });
 
-        //4. => let's send back the accessToken the client 
+        //5. => let's send back the accessToken the client 
         res.json({ accessToken });
         res.json({success: `User${user} is logged in!`});
     } else {
