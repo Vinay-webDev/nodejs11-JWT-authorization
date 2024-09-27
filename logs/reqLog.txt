@@ -1,0 +1,7 @@
+20240927	22:57:13	84b42f1a-f631-4726-bad9-f68097169c49	POST	undefined	/register
+20240927	22:57:21	400401ee-ce81-460b-81a6-b4a6ada71b4b	POST	undefined	/auth
+20240927	23:04:31	a9cfab1b-8a5b-48ed-91de-93ee20afc79d	POST	undefined	/auth
+20240927	23:04:54	4f4ace21-1e99-4b4f-9b01-a39b36490685	GET	undefined	/employees
+20240927	23:07:08	bb4ffb0f-5c6e-4580-a249-e50f19d7a6cb	GET	undefined	/employees
+20240927	23:07:36	85dc4d6b-b62e-42cf-bf2b-9ae85514410e	POST	undefined	/auth
+20240927	23:07:52	4eb8972f-51d7-41f5-90b2-25de7858e5c3	GET	undefined	/employees

@@ -51,7 +51,7 @@ const handleLogin = async(req, res) => {
 
         //5. => let's send back the accessToken the client 
         res.json({ accessToken });
-        res.json({success: `User${user} is logged in!`});
+        //res.json({success: `User${user} is logged in!`});
     } else {
         res.sendStatus(401);
     }
