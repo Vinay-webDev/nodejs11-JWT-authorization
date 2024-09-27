@@ -42,7 +42,7 @@ const handleLogin = async(req, res) => {
         //3. => now I need to combine currentUser and otherUsers we can do that with the setter function or updater function
         usersDB.setUsers([...otherUsers, currentUser]); // now we have json data with refresh token 
         //5. => so the thing is the cookies are vulnerable and they accessed via javascript so we don't send in just cookies but we know cookie with httpOnly is not accessed via javascript so can do that 
-        res.cookie('jwt', refreshToken, { expiresIn: 24 * 60 * 60 * 1000 });
+        res.cookie('jwt', refreshToken, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 });
 
         //4. => let's send back the accessToken the client 
         res.json({ accessToken });
