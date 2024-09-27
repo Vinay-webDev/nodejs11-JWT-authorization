@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: sans-serif;
+    font-size: 8em;
+    background-color: burlywood;
+    color: brown;
+}
+
+img {
+    margin-left: 80px;
+    width: 400px;
+    height: 400px;
+}
+
+
+
+
+
+

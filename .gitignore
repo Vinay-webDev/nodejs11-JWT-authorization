@@ -1,0 +1,5 @@
+node_modules
+.env
+/ss/one/*.[jJ][pP][gG]
+/ss/one/*.[pP][nN][gG]
+/ss/one/*.[gG][iI][fF]
