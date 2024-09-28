@@ -6,6 +6,7 @@ const errorHandler = require('./middleware/errorHandler');
 const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const verifyJWT = require('./middleware/verifyJWT');
+const cookieParser = require('cookie-parser');
 const PORT = process.env.PORT || 3500;
 
 app.use(logger);
@@ -15,6 +16,8 @@ app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
+//middleware for cookies
+app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -25,6 +28,8 @@ app.use('/register', require('./routes/register')); // definately not to protect
 app.use('/auth', require('./routes/auth')); // same goes for auth as well
 // I need to protect all the routes under employees
 // remember these routes act like a waterfall so everything that comes down after app.use(verifyJWT) will be protected 
+app.use('/refresh', require('./routes/refresh'));
+
 app.use(verifyJWT);
 
 app.use('/employees', require('./routes/api/employees'));
@@ -45,3 +50,15 @@ app.use(errorHandler);
 app.listen(PORT, () => {
     console.log(`server is running on port: ${PORT}`);
 })
+
+
+
+
+
+
+
+
+
+
+
+
