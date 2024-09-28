@@ -27,13 +27,14 @@ const handleLogin = async(req, res) => {
         const accessToken = jwt.sign(
             { 'username': foundUser.username },
             process.env.ACCESS_TOKEN_SECRET,
-            { expiresIn: '30s'}
+            { expiresIn: '60s'}
         )        
         const refreshToken = jwt.sign(
             { 'username': foundUser.username },
             process.env.REFRESH_TOKEN_SECRET,
             { expiresIn: '1d'}
         )    
+        // 👇👇👇Saving user with refresh token👇👇👇
         //[2] now we need to add refresh token to our database
         //1. =>to do that first let's grab the other users (which is an array of users except foundUser);
         const otherUsers = usersDB.users.filter( u => u.username !== foundUser.username);
