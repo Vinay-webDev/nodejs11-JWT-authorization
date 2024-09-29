@@ -31,3 +31,7 @@
 20240928	14:32:24	bea1824a-a378-4c42-a421-7ed6af93f5af	POST	undefined	/auth
 20240928	14:32:29	859e311a-3ce6-4b31-b920-81a2e15a5ccc	POST	undefined	/auth
 20240928	14:32:54	c20d8c9c-5c85-4a41-ad47-c84c35d05913	POST	undefined	/auth
+20240929	20:12:45	15736396-73ed-45d4-8a5d-e9f347cbd18b	POST	undefined	/auth
+20240929	20:13:08	77a5f42e-bbe7-4323-8d62-e1d37168fea6	GET	undefined	/logout
+20240929	20:14:04	cbca2c2f-e315-40ac-9d4b-94df612b2bed	POST	undefined	/auth
+20240929	20:14:43	ad83efed-2c64-4e80-8e12-a658a0c58a9c	GET	undefined	/logout
