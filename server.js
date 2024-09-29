@@ -31,6 +31,8 @@ app.use('/auth', require('./routes/auth')); // same goes for auth as well
 // remember these routes act like a waterfall so everything that comes down after app.use(verifyJWT) will be protected 
 app.use('/refresh', require('./routes/refresh'));
 
+app.use('/logout', require('./routes/logout'));
+
 app.use(verifyJWT);
 
 app.use('/employees', require('./routes/api/employees'));
